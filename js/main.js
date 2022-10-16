@@ -1,28 +1,55 @@
-// const answer = document.getElementById('bill');
-// const reset = document.getElementById('reset');
-// const alertZero = document.querySelector('.alert-zero');
-// const percents = document.querySelectorAll('.same');
+const tipButton = document.querySelectorAll(".same");
+const resetButton = document.querySelector("#reset");
+const input = document.querySelector("#bill");
+const persentCal = document.getElementsByClassName("same");
+// ----------------------------------------------------
+// ----------------------------------------------------
 
-// let
+let percent = 0;
+let peopleAmount = 0;
+let amount = 0;
+let allAmount = 0;
+// ----------------------------------------------------
+// ----------------------------------------------------
+// ----------------------------------------------------
+// ----------------------------------------------------
 
-let tipButton = document.querySelectorAll(".same");
 
-// answer.addEventListener('input', function () {
-//     if(answer.value >= 1) {
-//         document.querySelector('.top-right').textContent =
-//     }
-// })
-function zeroCheck() {
-  // answer. ('click', function () {
-  //     if(answer.value.length == '') {
-  //         alertZero.style.display = 'inline';
-  //         alertZero.style.color = '#e17457';
-  //     }
-  // })
+let amountBill = 0;
+function checkValue() {
+  console.log(amountBill)
+  
 }
 
+function tipCalculation () {
+  console.log(amountBill /= 2)
 }
 
-removeClick();
+// click remove-add on percent buttons
+function removeClick() {
+  for (let i = 0; i < tipButton.length; i++) {
+    tipButton[i].classList.remove("click");
+  }
+}
 
-zeroCheck();
+
+
+
+input.oninput = function () {
+  amountBill = input.value;
+  checkValue();
+  tipCalculation();
+};
+
+
+
+for (let i = 0; i < tipButton.length; i++) {
+  tipButton[i].addEventListener("click", (h) => {
+    removeClick();
+    h.target.classList.add("click");
+    console.log(h.target.value)
+  });
+}
+
+
+// ----------------------------------------------------
