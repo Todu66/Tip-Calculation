@@ -8,6 +8,7 @@
   
   <title>Tip calculator app</title>
   <link rel="stylesheet" href="/scss/style.css">
+  
 </head>
   <!-- STAR OF WRAPP -->
   <div class="wrapp">
@@ -17,19 +18,19 @@
       <div class="wrapp-first">
         <div class="alert">
           <p>Bill</p>
-          <p class="alert-zero">Can't be zero</p>
+          <p id="alert-zero">Can't be zero</p>
         </div>
   
         <img class="dolar-icon" src="/images/icon-dollar.svg" alt="dollar icon">
   
-        <input type="number" name="bill" id="bill" placeholder="0">
+        <input type="number" name="bill" id="bill" placeholder="0" min="0">
       </div>
       <!-- ---------WRAPP SECOND-------- -->
       <p class="select">Select Tip %</p>
       <div class="wrapp-second">
         
         <!-- -------------------- -->
-        <button class="same" value="5">5%</button>
+        <button class="same " value="5">5%</button>
         <button class="same" value="10">10%</button>
         <button class="same" value="15">15%</button>
         <button class="same" value="20">20%</button>
@@ -41,42 +42,47 @@
       <div class="wrapp-third">
         <div class="alert">
           <p>Number of People</p>
-          <p class="alert-zero">Can't be zero</p>
+          <p id="alert-zero2">Can't be zero</p>
         </div>
 
         <img src="/images/icon-person.svg" alt="logo of person">
 
-        <input type="number" name="" id="bill" placeholder="0">
+        <input type="number" name="" id="numpeople" placeholder="0" min="0">
       </div>
     </main>
     <!-- -------------------#end of main1#--------------------------- -->
+    <main class="main2">
+      <div class="amounts">
+        <div class="person">
+          <div>
+            <h3>Tip Amount</h3>
+            <p>/ person</p>
+          </div>
 
-    <div class="main2">
-      <div class="top">
-        <div class="top-left">
-          <p>Tip Amount</p>
-          <p>/ person</p>
+          <div class="right_amount">
+            <h1 id="tip-amount">$0.00</h1>
+          </div>
+
         </div>
 
-        <div class="top-right">
-          $0.00
+        <div class="person">
+          <div>
+            <h3>Total</h3>
+            <p>/ person</p>
+          </div>
+
+          <div class="right_amount">
+            <h1 id="total-amount">$0.00</h1>
+          </div>
+
         </div>
       </div>
 
-      <div class="down">
-        <div class="down-left">
-          <p>Total</p>
-          <p>/ perosn</p>
-        </div>
-
-        <div class="down-right">
-          $0.00
-        </div>
-
-        
+      <div class="bottom_button">
+        <button id="reset-button">Reset</button>
       </div>
-      <button id="reset">RESET</button>  
-    </div>
+    </main>
+
 
   </div>
 
